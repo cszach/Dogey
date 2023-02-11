@@ -25,6 +25,7 @@
         android:layout_height="262dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/image_button_description"
+        android:onClick="onGenerateMeme"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
