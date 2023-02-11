@@ -7,22 +7,24 @@
     tools:context=".MemeActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/memeImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/meme_image_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cheems" />
+        app:srcCompat="@drawable/cheems"
+        tools:ignore="RedundantDescriptionCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/memeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_fail"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/memeImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
