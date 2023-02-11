@@ -7,12 +7,30 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/action_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/action_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.20999998" />
+
+    <ImageButton
+        android:id="@+id/actionButton"
+        android:layout_width="205dp"
+        android:layout_height="262dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/image_button_description"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/action_textview"
+        app:layout_constraintVertical_bias="0.8"
+        app:srcCompat="@drawable/cheems_close" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
