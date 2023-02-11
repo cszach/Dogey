@@ -2,4 +2,5 @@
     <string name="app_name">Dogey</string>
     <string name="action_text">Hit Cheems</string>
     <string name="image_button_description">A shiba inu famously known as Cheems</string>
+    <string name="text_fail">When you expect a funny meme but your app is broken</string>
 </resources>
