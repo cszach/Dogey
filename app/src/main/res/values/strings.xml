@@ -3,4 +3,6 @@
     <string name="action_text">Hit Cheems</string>
     <string name="image_button_description">A shiba inu famously known as Cheems</string>
     <string name="text_fail">When you expect a funny meme but your app is broken</string>
+    <string name="meme_image_description">The meme image, which is selected randomly</string>
+    <string name="api_key">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</string>
 </resources>

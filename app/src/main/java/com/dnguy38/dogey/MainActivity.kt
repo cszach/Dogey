@@ -26,10 +26,17 @@ class MainActivity : AppCompatActivity() {
     fun onGenerateMeme(view: View) {
         val intent = Intent(this, MemeActivity::class.java)
         val memeImageId = R.drawable.cute_cat
-        val memeText = getText(R.string.app_name)
+        var memeText: String = "default"
+
+        val networkThread = Thread() {
+            memeText = model.aiGeneratedMemeText("Say this is a test", getString(R.string.api_key))
+        }
+        networkThread.start()
 
         intent.putExtra(MEME_IMAGE_ID, memeImageId)
         intent.putExtra(MEME_TEXT, memeText)
+
+        println(memeText)
 
         startForResult.launch(intent)
         model.addCount()
