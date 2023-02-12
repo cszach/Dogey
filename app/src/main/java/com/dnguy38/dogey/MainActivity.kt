@@ -27,11 +27,13 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, MemeActivity::class.java)
         val memeImageId = R.drawable.cute_cat
         var memeText: String = "default"
+        val prompt = getString(R.string.cute_cat_prompt)
 
         val networkThread = Thread() {
-            memeText = model.aiGeneratedMemeText("Say this is a test", getString(R.string.api_key))
+            memeText = model.aiGeneratedMemeText("$prompt", getString(R.string.api_key))
         }
         networkThread.start()
+        networkThread.join()
 
         intent.putExtra(MEME_IMAGE_ID, memeImageId)
         intent.putExtra(MEME_TEXT, memeText)

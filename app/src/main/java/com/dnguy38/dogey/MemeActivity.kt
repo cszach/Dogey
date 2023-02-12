@@ -21,6 +21,8 @@ class MemeActivity : AppCompatActivity() {
             val memeImageId = bundle.getInt(MEME_IMAGE_ID)
             val memeText = bundle.getString(MEME_TEXT)
 
+            memeTextView.text = memeText
+
             val memeImage = getDrawable(memeImageId)
 
             memeImageView.setImageDrawable(memeImage)

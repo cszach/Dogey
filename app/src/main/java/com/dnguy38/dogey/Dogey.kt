@@ -17,6 +17,7 @@ class Dogey {
         val url = URL("https://api.openai.com/v1/completions")
         val connection = url.openConnection() as HttpURLConnection
         var response = ""
+        var text: String
 
         try {
             connection.requestMethod = "POST"
@@ -25,7 +26,11 @@ class Dogey {
             // connection.setRequestProperty("Accept", "application/json")
             connection.doOutput = true
 
-            val dataJson = """{"model": "text-davinci-003", "prompt": "Say this is a test", "temperature": 0, "max_tokens": 7}"""
+            val dataJson = """
+                {
+                    "model": "text-davinci-003",
+                    "prompt": "$prompt"
+                }""".trimIndent()
             println(dataJson)
 
             val out = DataOutputStream(connection.outputStream)
@@ -65,13 +70,13 @@ class Dogey {
 
             val choicesJson = json.get("choices") as JSONArray
             val firstChoice = choicesJson.get(0) as JSONObject
-            val text = firstChoice.get("text") as String
+            text = firstChoice.get("text") as String
 
             println(text)
         } finally {
             connection.disconnect()
         }
 
-        return response
+        return text
     }
 }

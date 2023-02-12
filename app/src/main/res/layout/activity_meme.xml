@@ -9,22 +9,23 @@
     <ImageView
         android:id="@+id/memeImageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="607dp"
         android:contentDescription="@string/meme_image_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cheems"
+        app:srcCompat="@drawable/swole_doge"
         tools:ignore="RedundantDescriptionCheck" />
 
     <TextView
         android:id="@+id/memeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_fail"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:text="@string/loading_text"
+        android:textAppearance="@style/Meme"
         app:layout_constraintBottom_toBottomOf="@+id/memeImageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
