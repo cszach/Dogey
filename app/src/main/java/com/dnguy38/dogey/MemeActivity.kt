@@ -66,19 +66,23 @@ class MemeActivity : AppCompatActivity() {
                 return@Thread
             }
 
-            val memeTextChoices = apiClient.extractCompletions(response)
+            val completions = apiClient.extractCompletions(response)
 
             runOnUiThread {
-                when (memeTextChoices.size) {
+                when (completions.size) {
                     0 -> loadFailMeme()
                     else -> {
+                        val firstCompletion = JSONObject(completions[0])
+                        val firstCompletionText = firstCompletion.get("text") as String
+                        val memeText = firstCompletionText.trim()
+
                         memeImageView.setImageDrawable(memeImage)
-                        memeTextView.text = (JSONObject(memeTextChoices[0])).get("text") as String
+                        memeTextView.text = memeText
                     }
                 }
             }
 
-            val result = when (memeTextChoices.size) {
+            val result = when (completions.size) {
                 0 -> RESULT_CANCELED
                 else -> RESULT_OK
             }
