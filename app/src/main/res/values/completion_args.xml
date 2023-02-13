@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="model">text-davinci-003</string>
+    <integer name="max_tokens">2048</integer>
+    <integer name="temperature">1</integer>
+</resources>

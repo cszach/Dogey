@@ -12,6 +12,7 @@ const val MEME_IMAGE_ID = "com.dnguy38.dogey.meme_image_id"
 const val PROMPT_ID = "com.dnguy38.dogey.meme_text_id"
 
 class MainActivity : AppCompatActivity() {
+    private val model: Dogey = Dogey()
     private val availableMemes = mapOf(
         R.drawable.cute_cat to R.string.cute_cat_prompt
     )
@@ -23,9 +24,10 @@ class MainActivity : AppCompatActivity() {
 
     private val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
-            val count = result.data?.getIntExtra(COUNT, 0)
-            Snackbar.make(findViewById(R.id.actionButton), "$count", LENGTH_SHORT).show()
+            model.addCount()
         }
+
+        Snackbar.make(findViewById(R.id.actionButton), "${model.count}", LENGTH_SHORT).show()
     }
 
     fun onGenerateMeme(view: View) {
