@@ -16,10 +16,13 @@ class MainActivity : AppCompatActivity() {
     private val availableMemes = mapOf(
         R.drawable.cute_cat to R.string.cute_cat_prompt
     )
+    private lateinit var numberOfMemesText: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        numberOfMemesText = getString(R.string.number_of_memes_text)
     }
 
     private val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -27,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             model.addCount()
         }
 
-        Snackbar.make(findViewById(R.id.actionButton), "${model.count}", LENGTH_SHORT).show()
+        Snackbar.make(findViewById(R.id.actionButton), "$numberOfMemesText ${model.count}", LENGTH_SHORT).show()
     }
 
     fun onGenerateMeme(view: View) {

@@ -5,6 +5,7 @@
     <string name="text_fail">When you expect a funny meme but your app is broken</string>
     <string name="meme_image_description">The meme image, which is selected randomly</string>
     <string name="loading_text">You when you know an ultra dank meme is coming…</string>
+    <string name="number_of_memes_text">Dank meme counter: </string>
     <string name="openai_url">https://api.openai.com/v1/completions</string>
     <string name="api_key">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</string>
 </resources>
