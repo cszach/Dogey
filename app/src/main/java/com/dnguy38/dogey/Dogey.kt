@@ -13,7 +13,7 @@ class Dogey {
         count++
     }
 
-    fun aiGeneratedMemeText(prompt: String, apiKey: String): String {
+    fun aiGeneratedMemeText(prompt: String, apiKey: String): String? {
         val url = URL("https://api.openai.com/v1/completions")
         val connection = url.openConnection() as HttpURLConnection
         var response = ""
@@ -45,10 +45,10 @@ class Dogey {
 
             var inputStream: InputStream
 
-            if (connection.responseCode != HttpURLConnection.HTTP_OK) {
-                inputStream = connection.errorStream
-            } else {
+            if (connection.responseCode == HttpURLConnection.HTTP_OK) {
                 inputStream = connection.inputStream
+            } else {
+                inputStream = connection.errorStream
             }
 
             val reader = BufferedReader(InputStreamReader(inputStream))
@@ -64,6 +64,10 @@ class Dogey {
                 response += readLine
             }
 
+            if (connection.responseCode != HttpURLConnection.HTTP_OK) {
+                return null
+            }
+
             println(response)
 
             val json = JSONObject(response)
@@ -77,6 +81,6 @@ class Dogey {
             connection.disconnect()
         }
 
-        return text
+        return text.trim().trim('"')
     }
 }
