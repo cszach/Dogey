@@ -3,11 +3,14 @@ package com.dnguy38.dogey
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import org.json.JSONObject
 
 class MemeActivity : AppCompatActivity() {
+    private val TAG = "MemeActivity"
+
     private val jsonBuilder = OpenAiJsonBuilder()
     private lateinit var apiClient: OpenAiClient
     private lateinit var memeImageView: ImageView
@@ -49,6 +52,8 @@ class MemeActivity : AppCompatActivity() {
         jsonBuilder.buildPrompt(prompt)
 
         val data = jsonBuilder.build()
+
+        Log.d(TAG, "JSON: $data")
 
         if (data == null) {
             loadFailMeme()
