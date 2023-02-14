@@ -14,7 +14,14 @@ const val PROMPT_ID = "com.dnguy38.dogey.meme_text_id"
 class MainActivity : AppCompatActivity() {
     private val model: Dogey = Dogey()
     private val availableMemes = mapOf(
-        R.drawable.cute_cat to R.string.cute_cat_prompt
+        R.drawable.cute_cat to R.string.cute_cat_prompt,
+        R.drawable.gigachad to R.string.gigachad_prompt,
+        R.drawable.this_is_fine to R.string.this_is_fine_prompt,
+        R.drawable.waiting_skeleton to R.string.waiting_skeleton_prompt,
+        R.drawable.blank_nut_button to R.string.blank_nut_button_prompt,
+        R.drawable.brace_yourselves_x_is_coming to R.string.brace_yourselves_x_is_coming_prompt,
+        R.drawable.wake_up_babe to R.string.wake_up_babe_prompt,
+        R.drawable.resource_finally to R.string.finally_prompt
     )
     private lateinit var numberOfMemesText: String
 

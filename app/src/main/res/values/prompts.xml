@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="cute_cat_prompt">Give me a meme text for a cute cat staring blankly at the camera</string>
+    <string name="gigachad_prompt">Give me a meme text for a confident muscular man</string>
+    <string name="this_is_fine_prompt">Give me an ironic meme text for a dog sitting calmly at a table inside a burning house</string>
+    <string name="waiting_skeleton_prompt">Give me an meme text for a waiting skeleton</string>
+    <string name="blank_nut_button_prompt">Give me a meme text for a person hitting a button really quick as soon as they see the button. The meme text should be a situation in which someone will grab something as soon as they see it.</string>
+    <string name="brace_yourselves_x_is_coming_prompt">Fill anything funny in the blank, and make sure you repeat the whole sentence, not just saying only the word in the blank: Brace yourselves, BLANK is coming.</string>
+    <string name="wake_up_babe_prompt">Fill something funny in the blank, and make sure you repeat the whole sentence, not just saying only the word in the blank: Wake up babe, BLANK.</string>
+    <string name="finally_prompt">Fill a funny noun and maybe with an adjective in the blank, and make sure you repeat the whole sentence, not just saying only the word in the blank: Finally, BLANK.</string>
 </resources>
