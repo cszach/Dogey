@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Dogey</string>
     <string name="action_text">Đánh Cheems đi</string>
+    <string name="image_button_description">Một con shiba inu tên là Cheems</string>
+    <string name="text_fail">Khi bạn mong đợi một cái meme hài hài nhưng app hỏng</string>
+    <string name="meme_image_description">Ảnh meme được chọn ngẫu nhiên</string>
+    <string name="loading_text">Bạn khi bạn biết một cái meme hài sẽ hiện lên</string>
+    <string name="number_of_memes_text">"Số dảk meme bạn đã tạo: "</string>
+    <string name="cute_cat_prompt">Cho tôi một dòng chữ meme cho một con mèo nhìn chằm chằm vào camera</string>
+    <string name="gigachad_prompt">Cho tôi một dòng chữ meme cho một người đàn ông lực lưỡng</string>
+    <string name="this_is_fine_prompt">Cho tôi một dòng chữ meme mỉa mai cho một con chó ngồi bình tĩnh trong một ngôi nhà đang cháy</string>
+    <string name="waiting_skeleton_prompt">Cho tôi một dòng chữ meme cho một bộ xương đang ngồi đợi</string>
+    <string name="blank_nut_button_prompt">Cho tôi một dòng chữ meme cho một người bấm một cái nút một cách khẩn trương. Dòng chữ meme miêu tả một tình huống mà khi một người nhìn thấy một cái gì đó, họ muốn hành động càng nhanh càng tốt.</string>
+    <string name="brace_yourselves_x_is_coming_prompt">Điền bất cứ cái gì hài hước vào chỗ trống, và hãy lặp lại cả câu thay vì chỉ đưa ra mỗi từ để điền vào chỗ trống: hãy bám vững, TRỐNG đang đến</string>
+    <string name="wake_up_babe_prompt">Điền bất cứ cái gì hài hước vào chỗ trống, và hãy lặp lại cả câu thay vì chỉ đưa ra mỗi từ để điền vào chỗ trống: dậy đi em yêu, TRỐNG</string>
+    <string name="finally_prompt">Điền bất cứ danh từ gì hài hước vào chỗ trống và có thể kèm theo một tính từ, và hãy lặp lại cả câu thay vì chỉ đưa ra mỗi từ để điền vào chỗ trống: đây rồi, TRỐNG</string>
+    <string name="app_name">Dogey</string>
 </resources>
